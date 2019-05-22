@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootPane" prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="POS.POScontroller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Orders">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onlineOrders" text="Online Orders" />
+                  <MenuItem mnemonicParsing="false" onAction="#storeOrders" text="Store Orders" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Time Clock">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loginPage" text="Login" />
+                  <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout/Report" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Information">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Food" />
+                  <MenuItem mnemonicParsing="false" text="Drinks" />
+                  <MenuItem mnemonicParsing="false" text="Employee's" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Pane prefHeight="577.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="304.0" layoutY="14.0" text="Access Error" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="206.0" fitWidth="562.0" layoutX="119.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/EddiesTavernLogo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="204.0" layoutY="346.0" text="You must be logged in to access this.">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginPgBtn" layoutX="363.0" layoutY="469.0" mnemonicParsing="false" onAction="#loginPage" text="Login Page" />
+            <Label layoutX="192.0" layoutY="381.0" text="Or you do not have manager privilidge.">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label alignment="BOTTOM_CENTER" layoutX="339.0" layoutY="100.0" text="© Eddy Herrera 2019" textAlignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentUser" layoutX="14.0" layoutY="100.0" />
+         </children>
+      </AnchorPane>
+   </children>
+
+</VBox>

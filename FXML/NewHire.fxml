@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="rootPane" prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="POS.POScontroller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Orders">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onlineOrders" text="Online Orders" />
+                  <MenuItem mnemonicParsing="false" onAction="#storeOrders" text="Store Orders" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Time Clock">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loginPage" text="Login" />
+                  <MenuItem mnemonicParsing="false" onAction="#logout" text="Logout/Report" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Information">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Food" />
+                  <MenuItem mnemonicParsing="false" text="Drinks" />
+                  <MenuItem mnemonicParsing="false" text="Employee's" />
+                  <MenuItem mnemonicParsing="false" onAction="#cancelCreation" text="Management Console" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Pane prefHeight="491.0" prefWidth="800.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="294.0" layoutY="14.0" text="New Account" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="137.0" fitWidth="290.0" layoutX="255.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/EddiesTavernLogo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="name" layoutX="300.0" layoutY="229.0" prefWidth="200.0" promptText="Full Name" />
+            <PasswordField fx:id="passwordField" layoutX="300.0" layoutY="301.0" prefWidth="200.0" promptText="Password" />
+            <TextField fx:id="userID" layoutX="300.0" layoutY="265.0" prefWidth="200.0" promptText="User ID" />
+            <TextField fx:id="accessLvl" layoutX="300.0" layoutY="335.0" prefWidth="200.0" promptText="Access Level" />
+            <Button fx:id="submit" layoutX="419.0" layoutY="382.0" mnemonicParsing="false" onAction="#createNewUser" text="Submit" />
+            <Button fx:id="cancelBtn" layoutX="324.0" layoutY="382.0" mnemonicParsing="false" onAction="#cancelCreation" text="Cancel" />
+            <VBox alignment="CENTER" layoutX="158.0" layoutY="420.0" prefHeight="53.0" prefWidth="488.0">
+               <children>
+                  <Label fx:id="errorMSG">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="140.0" prefWidth="800.0">
+         <children>
+            <Label alignment="BOTTOM_CENTER" layoutX="341.0" layoutY="113.0" text="© Eddy Herrera 2019" textAlignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentUser" layoutX="14.0" layoutY="113.0" />
+            <TextField editable="false" layoutX="102.0" layoutY="14.0" prefHeight="87.0" prefWidth="596.0" text="Access Levels: GM - General Manager | TM - Team Manager | AB - Alcohol Bartender | FS - Food Server |" />
+         </children>
+      </AnchorPane>
+   </children>
+
+</VBox>

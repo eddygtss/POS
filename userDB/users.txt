@@ -1,0 +1,35 @@
+[general manager]
+Eddy Herrera
+123
+1001
+GM
+[foodserver]
+Han Joseph
+123
+1002
+FS
+[team manager]
+Juan Herrera
+123
+1003
+TM
+[alcohol bartender]
+Josh
+123
+1004
+AB
+[general manager]
+Test Account 1
+123
+1005
+GM
+[team manager]
+Test Account 2
+123
+1006
+TM
+[team manager]
+TEST
+123
+1007
+TM
